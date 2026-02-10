@@ -36,9 +36,8 @@ def generate_table():
 def validate_hash():
     entered_directory = input("Please enter the directory path that you want to validate: ")
 
-    file = open(hash_table_file, "r")
-    hashes_in_file = json.load(file)
-    file.close()
+    with open(hash_table_file, "r") as file:
+        hashes_in_file = json.load(file)
 
     current_hashes = traverse_directory(entered_directory)
 

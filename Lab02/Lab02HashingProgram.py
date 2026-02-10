@@ -16,11 +16,6 @@ def hash_file(filepath):
 def traverse_directory(directory):
     hashes = {}
 
-    # for root, _, files in os.walk(directory):
-    #     for name in files:
-    #         path = os.path.join(root, name)
-    #         hashes[path] = hash_file(path)
-    
     for filename in os.listdir(directory):
         path = os.path.join(directory, filename)
 
